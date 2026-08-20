@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShaaFici Updirashiit | Personal Profile</title>
+<meta name="description" content="ShaaFici Updirashiit - Personal Profile and Social Media">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#0b1220;color:white;line-height:1.6}
+nav{position:fixed;top:0;left:0;width:100%;background:rgba(11,18,32,.95);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;z-index:1000;border-bottom:1px solid #26334d}
+.logo{font-size:21px;font-weight:bold;color:#38bdf8}
+nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
+nav a:hover{color:#38bdf8}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:100px 20px 50px;background:radial-gradient(circle at top,#17345c 0%,#0b1220 55%)}
+.hero-content{max-width:700px}
+.profile-img{width:170px;height:170px;object-fit:cover;object-position:center;border-radius:50%;border:5px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,.35);margin-bottom:20px}
+.hero h1{font-size:42px;margin-bottom:10px}
+.hero h1 span{color:#38bdf8}
+.hero p{color:#cbd5e1;font-size:18px;margin-bottom:25px}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:30px;text-decoration:none;color:white;background:#0284c7;font-weight:bold;transition:.3s}
+.btn:hover{transform:translateY(-3px);background:#38bdf8;color:#07111f}
+section{padding:80px 20px}
+.container{max-width:1000px;margin:auto}
+.section-title{text-align:center;font-size:30px;margin-bottom:40px;color:#38bdf8}
+.about,.contact{background:#101a2d}
+.about-box{max-width:750px;margin:auto;text-align:center;color:#cbd5e1;font-size:17px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill{background:#111d33;padding:25px;text-align:center;border-radius:15px;border:1px solid #26334d;transition:.3s}
+.skill:hover{transform:translateY(-5px);border-color:#38bdf8}
+.skill h3{color:#38bdf8;margin-bottom:8px}
+.skill p{color:#cbd5e1;font-size:14px}
+.social{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:700px;margin:auto}
+.social a{text-decoration:none;color:white;padding:18px;border-radius:12px;text-align:center;font-weight:bold;background:#17243a;border:1px solid #26334d;transition:.3s}
+.social a:hover{background:#0284c7;transform:scale(1.03)}
+.contact{text-align:center}
+.contact p{color:#cbd5e1;margin-bottom:20px}
+footer{text-align:center;padding:25px 15px;background:#070d18;color:#94a3b8;font-size:14px}
+@media(max-width:700px){
+nav{padding:13px 15px}.logo{font-size:17px}nav .links{display:none}
+.hero h1{font-size:32px}.hero p{font-size:16px}
+.profile-img{width:145px;height:145px}
+.skills,.social{grid-template-columns:1fr}
+section{padding:65px 15px}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">ShaaFici</div>
+<div class="links">
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#social">Social</a><a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<img src="profile.jpg" alt="ShaaFici Updirashiit" class="profile-img">
+<h1>Hi, I'm <span>ShaaFici Updirashiit</span></h1>
+<p>Welcome to my personal profile website.</p>
+<div class="buttons">
+<a class="btn" href="https://wa.me/252906982968" target="_blank">WhatsApp</a>
+<a class="btn" href="https://www.tiktok.com/@boss_1090" target="_blank">TikTok</a>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<div class="about-box">
+<p>My name is <strong>ShaaFici Updirashiit</strong>. This is my personal profile website where you can find my social media accounts and contact information.</p>
+<br>
+<p>Feel free to connect with me through WhatsApp, TikTok, Facebook or Messenger.</p>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<h2 class="section-title">My Skills</h2>
+<div class="skills">
+<div class="skill"><h3>💻 Web</h3><p>Personal websites and basic web development.</p></div>
+<div class="skill"><h3>📱 Social Media</h3><p>Social media presence and online communication.</p></div>
+<div class="skill"><h3>🚀 Creativity</h3><p>Learning, creating and developing new ideas.</p></div>
+</div>
+</div>
+</section>
+
+<section id="social">
+<div class="container">
+<h2 class="section-title">Connect With Me</h2>
+<div class="social">
+<a href="https://wa.me/252906982968" target="_blank">📱 WhatsApp</a>
+<a href="https://www.tiktok.com/@boss_1090" target="_blank">🎵 TikTok</a>
+<a href="https://www.facebook.com/ipnu.rashiid.cali" target="_blank">📘 Facebook</a>
+<a href="https://m.me/ipnu.rashiid.cali" target="_blank">💬 Messenger</a>
+<a href="mailto:shaaficicrashiid1@gmail.com">📧 Email</a>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="section-title">Contact Me</h2>
+<p>Want to contact me? Choose one of the options below.</p>
+<div class="buttons">
+<a class="btn" href="https://wa.me/252906982968" target="_blank">Message on WhatsApp</a>
+<a class="btn" href="mailto:shaaficicrashiid1@gmail.com">Send Email</a>
+</div>
+</div>
+</section>
+
+<footer>© 2026 ShaaFici Updirashiit. All Rights Reserved.</footer>
+</body>
+</html>
