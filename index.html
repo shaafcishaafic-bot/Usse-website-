@@ -3,116 +3,948 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ShaaFici Updirashiit | Personal Profile</title>
-<meta name="description" content="ShaaFici Updirashiit - Personal Profile and Social Media">
+
+<meta name="description"
+content="ShaaFici Updirashiit - Personal Profile and Social Media">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#0b1220;color:white;line-height:1.6}
-nav{position:fixed;top:0;left:0;width:100%;background:rgba(11,18,32,.95);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;z-index:1000;border-bottom:1px solid #26334d}
-.logo{font-size:21px;font-weight:bold;color:#38bdf8}
-nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
-nav a:hover{color:#38bdf8}
-.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:100px 20px 50px;background:radial-gradient(circle at top,#17345c 0%,#0b1220 55%)}
-.hero-content{max-width:700px}
-.profile-img{width:170px;height:170px;object-fit:cover;object-position:center;border-radius:50%;border:5px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,.35);margin-bottom:20px}
-.hero h1{font-size:42px;margin-bottom:10px}
-.hero h1 span{color:#38bdf8}
-.hero p{color:#cbd5e1;font-size:18px;margin-bottom:25px}
-.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 20px;border-radius:30px;text-decoration:none;color:white;background:#0284c7;font-weight:bold;transition:.3s}
-.btn:hover{transform:translateY(-3px);background:#38bdf8;color:#07111f}
-section{padding:80px 20px}
-.container{max-width:1000px;margin:auto}
-.section-title{text-align:center;font-size:30px;margin-bottom:40px;color:#38bdf8}
-.about,.contact{background:#101a2d}
-.about-box{max-width:750px;margin:auto;text-align:center;color:#cbd5e1;font-size:17px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.skill{background:#111d33;padding:25px;text-align:center;border-radius:15px;border:1px solid #26334d;transition:.3s}
-.skill:hover{transform:translateY(-5px);border-color:#38bdf8}
-.skill h3{color:#38bdf8;margin-bottom:8px}
-.skill p{color:#cbd5e1;font-size:14px}
-.social{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:700px;margin:auto}
-.social a{text-decoration:none;color:white;padding:18px;border-radius:12px;text-align:center;font-weight:bold;background:#17243a;border:1px solid #26334d;transition:.3s}
-.social a:hover{background:#0284c7;transform:scale(1.03)}
-.contact{text-align:center}
-.contact p{color:#cbd5e1;margin-bottom:20px}
-footer{text-align:center;padding:25px 15px;background:#070d18;color:#94a3b8;font-size:14px}
-@media(max-width:700px){
-nav{padding:13px 15px}.logo{font-size:17px}nav .links{display:none}
-.hero h1{font-size:32px}.hero p{font-size:16px}
-.profile-img{width:145px;height:145px}
-.skills,.social{grid-template-columns:1fr}
-section{padding:65px 15px}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#07111f;
+    color:white;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,17,31,.80);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:800;
+    color:#38bdf8;
+}
+
+.links{
+    display:flex;
+    gap:25px;
+}
+
+.links a{
+    font-size:14px;
+    color:#cbd5e1;
+    transition:.3s;
+}
+
+.links a:hover{
+    color:#38bdf8;
+}
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:0;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    padding:110px 0 70px;
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        rgba(14,165,233,.25),
+        transparent 35%
+    ),
+    linear-gradient(
+        180deg,
+        #0b1b31 0%,
+        #07111f 75%
+    );
+}
+
+.hero-content{
+    max-width:800px;
+    margin:auto;
+}
+
+.profile-wrap{
+    width:190px;
+    height:190px;
+    margin:0 auto 25px;
+    padding:6px;
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #38bdf8,
+        #8b5cf6,
+        #38bdf8
+    );
+
+    box-shadow:
+    0 0 45px rgba(56,189,248,.28);
+
+    animation:float 4s ease-in-out infinite;
+}
+
+.profile-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #07111f;
+    background:white;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 14px;
+    border-radius:30px;
+
+    background:rgba(56,189,248,.10);
+    border:1px solid rgba(56,189,248,.25);
+
+    color:#7dd3fc;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:clamp(36px,7vw,64px);
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+h1 span{
+    color:#38bdf8;
+
+    text-shadow:
+    0 0 25px rgba(56,189,248,.20);
+}
+
+.hero p{
+    color:#cbd5e1;
+    font-size:18px;
+    max-width:650px;
+    margin:0 auto 28px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:13px 22px;
+    border-radius:30px;
+
+    font-weight:700;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0284c7,
+        #38bdf8
+    );
+
+    color:#03111e;
+
+    transition:.3s;
+
+    box-shadow:
+    0 8px 25px rgba(2,132,199,.20);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 12px 30px rgba(56,189,248,.30);
+}
+
+.btn.secondary{
+    background:rgba(255,255,255,.06);
+    color:white;
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:none;
+}
+
+.btn.secondary:hover{
+    background:rgba(255,255,255,.11);
+}
+
+/* SECTIONS */
+
+section{
+    padding:95px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.section-title span{
+    color:#38bdf8;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#94a3b8;
+    margin-bottom:42px;
+}
+
+/* ABOUT */
+
+.about{
+    background:#0a1729;
+}
+
+.about-card{
+    max-width:850px;
+    margin:auto;
+    padding:32px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.20);
+}
+
+.about-card p{
+    color:#cbd5e1;
+    font-size:17px;
+    margin-bottom:14px;
+}
+
+.about-card strong{
+    color:#38bdf8;
+}
+
+/* SKILLS */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.skill{
+    padding:28px;
+    border-radius:20px;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        #101f35,
+        #0b1729
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+    border-color:rgba(56,189,248,.45);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.skill h3{
+    color:#7dd3fc;
+    margin-bottom:8px;
+}
+
+.skill p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* SOCIAL */
+
+.social{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    max-width:800px;
+    margin:auto;
+}
+
+.social a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:19px;
+
+    border-radius:15px;
+
+    background:#101f35;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#e2e8f0;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.social a:hover{
+    transform:translateY(-4px);
+    background:#0e7490;
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 10px 30px rgba(56,189,248,.12);
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #0a1729,
+        #07111f
+    );
+}
+
+.contact p{
+    color:#94a3b8;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:28px 15px;
+
+    background:#040a13;
+
+    color:#64748b;
+
+    font-size:14px;
+
+    border-top:
+    1px solid rgba(255,255,255,.06);
+}
+
+/* TOP BUTTON */
+
+.top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#0284c7;
+    color:white;
+
+    z-index:900;
+
+    box-shadow:
+    0 8px 25px rgba(2,132,199,.25);
+}
+
+/* ANIMATION */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .nav-inner{
+        min-height:62px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .links{
+        display:none;
+
+        position:absolute;
+
+        top:62px;
+        left:0;
+
+        width:100%;
+
+        padding:15px;
+
+        flex-direction:column;
+
+        gap:0;
+
+        background:rgba(7,17,31,.97);
+
+        border-bottom:
+        1px solid rgba(255,255,255,.08);
+    }
+
+    .links.show{
+        display:flex;
+    }
+
+    .links a{
+        padding:12px 5px;
+    }
+
+    .profile-wrap{
+        width:155px;
+        height:155px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .skills,
+    .social{
+        grid-template-columns:1fr;
+    }
+
+    .about-card{
+        padding:23px;
+    }
+
+    .section-title{
+        font-size:29px;
+    }
+
+}
+
 </style>
 </head>
+
 <body>
+
+<!-- NAVIGATION -->
+
 <nav>
-<div class="logo">ShaaFici</div>
-<div class="links">
-<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#social">Social</a><a href="#contact">Contact</a>
+
+<div class="container nav-inner">
+
+<a class="logo" href="#home">
+ShaaFici.
+</a>
+
+<button
+class="menu-btn"
+onclick="toggleMenu()"
+aria-label="Menu">
+
+☰
+
+</button>
+
+<div class="links" id="navLinks">
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#social">Social</a>
+
+<a href="#contact">Contact</a>
+
 </div>
+
+</div>
+
 </nav>
 
+
+<!-- HOME -->
+
 <section class="hero" id="home">
-<div class="hero-content">
-<img src="profile.jpg" alt="ShaaFici Updirashiit" class="profile-img">
-<h1>Hi, I'm <span>ShaaFici Updirashiit</span></h1>
-<p>Welcome to my personal profile website.</p>
+
+<div class="container hero-content">
+
+<!-- SAWIRKAAGA -->
+
+<div class="profile-wrap">
+
+<img
+src="profile.jpg"
+alt="ShaaFici Updirashiit"
+class="profile-img">
+
+</div>
+
+
+<div class="badge">
+
+👋 Welcome to my website
+
+</div>
+
+
+<h1>
+
+Hi, I'm
+
+<span>ShaaFici Updirashiit</span>
+
+</h1>
+
+
+<p>
+
+Welcome to my personal profile.
+Connect with me through my
+social media and let's stay connected.
+
+</p>
+
+
 <div class="buttons">
-<a class="btn" href="https://wa.me/252906982968" target="_blank">WhatsApp</a>
-<a class="btn" href="https://www.tiktok.com/@boss_1090" target="_blank">TikTok</a>
+
+<a
+class="btn"
+href="https://wa.me/252906982968"
+target="_blank">
+
+📱 WhatsApp
+
+</a>
+
+
+<a
+class="btn secondary"
+href="#social">
+
+🔗 My Socials
+
+</a>
+
 </div>
+
 </div>
+
 </section>
 
-<section class="about" id="about">
+
+<!-- ABOUT -->
+
+<section
+class="about"
+id="about">
+
 <div class="container">
-<h2 class="section-title">About Me</h2>
-<div class="about-box">
-<p>My name is <strong>ShaaFici Updirashiit</strong>. This is my personal profile website where you can find my social media accounts and contact information.</p>
-<br>
-<p>Feel free to connect with me through WhatsApp, TikTok, Facebook or Messenger.</p>
+
+<h2 class="section-title">
+
+About <span>Me</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+A little information about me
+
+</p>
+
+
+<div class="about-card">
+
+<p>
+
+My name is
+
+<strong>ShaaFici Updirashiit</strong>.
+
+This is my personal profile website
+where you can find my social media
+accounts and contact information.
+
+</p>
+
+
+<p>
+
+Feel free to connect with me through
+WhatsApp, TikTok, Facebook,
+Messenger or Email.
+
+</p>
+
 </div>
+
 </div>
+
 </section>
+
+
+<!-- SKILLS -->
 
 <section id="skills">
+
 <div class="container">
-<h2 class="section-title">My Skills</h2>
+
+<h2 class="section-title">
+
+My <span>Skills</span>
+
+</h2>
+
+
+<p class="section-subtitle">
+
+Things I enjoy learning and developing
+
+</p>
+
+
 <div class="skills">
-<div class="skill"><h3>💻 Web</h3><p>Personal websites and basic web development.</p></div>
-<div class="skill"><h3>📱 Social Media</h3><p>Social media presence and online communication.</p></div>
-<div class="skill"><h3>🚀 Creativity</h3><p>Learning, creating and developing new ideas.</p></div>
+
+
+<div class="skill">
+
+<div class="icon">
+💻
 </div>
+
+<h3>
+Web Development
+</h3>
+
+<p>
+
+Personal websites and basic
+modern web development.
+
+</p>
+
 </div>
+
+
+<div class="skill">
+
+<div class="icon">
+📱
+</div>
+
+<h3>
+Social Media
+</h3>
+
+<p>
+
+Online communication and
+building a strong social presence.
+
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<div class="icon">
+🚀
+</div>
+
+<h3>
+Creativity
+</h3>
+
+<p>
+
+Learning new things,
+creating ideas and improving
+every day.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- SOCIAL MEDIA -->
 
 <section id="social">
+
 <div class="container">
-<h2 class="section-title">Connect With Me</h2>
+
+<h2 class="section-title">
+
+Connect <span>With Me</span>
+
+</h2>
+
+
+<p class="section-subtitle">
+
+Find me on social media
+
+</p>
+
+
 <div class="social">
-<a href="https://wa.me/252906982968" target="_blank">📱 WhatsApp</a>
-<a href="https://www.tiktok.com/@boss_1090" target="_blank">🎵 TikTok</a>
-<a href="https://www.facebook.com/ipnu.rashiid.cali" target="_blank">📘 Facebook</a>
-<a href="https://m.me/ipnu.rashiid.cali" target="_blank">💬 Messenger</a>
-<a href="mailto:shaaficicrashiid1@gmail.com">📧 Email</a>
+
+
+<a
+href="https://wa.me/252906982968"
+target="_blank">
+
+📱 WhatsApp
+
+</a>
+
+
+<a
+href="https://www.tiktok.com/@boss_1090"
+target="_blank">
+
+🎵 TikTok
+
+</a>
+
+
+<a
+href="https://www.facebook.com/ipnu.rashiid.cali"
+target="_blank">
+
+📘 Facebook
+
+</a>
+
+
+<a
+href="https://m.me/ipnu.rashiid.cali"
+target="_blank">
+
+💬 Messenger
+
+</a>
+
+
+<a
+href="mailto:shaaficicrashiid1@gmail.com">
+
+📧 Email
+
+</a>
+
+
 </div>
+
 </div>
+
 </section>
 
-<section class="contact" id="contact">
+
+<!-- CONTACT -->
+
+<section
+class="contact"
+id="contact">
+
 <div class="container">
-<h2 class="section-title">Contact Me</h2>
-<p>Want to contact me? Choose one of the options below.</p>
+
+<h2 class="section-title">
+
+Let's <span>Connect</span>
+
+</h2>
+
+
+<p>
+
+Want to contact me?
+Choose one of the options below.
+
+</p>
+
+
 <div class="buttons">
-<a class="btn" href="https://wa.me/252906982968" target="_blank">Message on WhatsApp</a>
-<a class="btn" href="mailto:shaaficicrashiid1@gmail.com">Send Email</a>
+
+
+<a
+class="btn"
+href="https://wa.me/252906982968"
+target="_blank">
+
+Message on WhatsApp
+
+</a>
+
+
+<a
+class="btn secondary"
+href="mailto:shaaficicrashiid1@gmail.com">
+
+Send Email
+
+</a>
+
+
 </div>
+
 </div>
+
 </section>
 
-<footer>© 2026 ShaaFici Updirashiit. All Rights Reserved.</footer>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 ShaaFici Updirashiit ·
+All Rights Reserved.
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<a
+class="top"
+href="#home"
+aria-label="Back to top">
+
+↑
+
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("show");
+
+}
+
+
+document
+.querySelectorAll(".links a")
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+document
+.getElementById("navLinks")
+.classList
+.remove("show");
+
+});
+
+});
+
+</script>
+
 </body>
 </html>
